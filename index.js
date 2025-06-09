@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 connectDB(); // <--- CALL IT HERE
 
-app.use(cors({origin: 'https://mucisa-sci-maseno-university.netlify.app/'}));
+app.use(cors({origin: '*'})); // Enable CORS for all origins
 app.use(express.json());
 
 // Routes
