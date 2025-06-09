@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 connectDB(); // <--- CALL IT HERE
 
-app.use(cors());
+app.use(cors({origin: 'https://mucisa-sci-maseno-university.netlify.app/'}));
 app.use(express.json());
 
 // Routes
