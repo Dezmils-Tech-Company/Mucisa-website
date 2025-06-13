@@ -12,6 +12,7 @@ const registrationSchema = new mongoose.Schema({
     email: {
       type: String,
       required: true,
+      unique:true,
       match: [/.+@.+\..+/, 'Please enter a valid email address']
     },
     gender: { type: String, enum: ['male', 'female'], required: true },
@@ -21,7 +22,7 @@ const registrationSchema = new mongoose.Schema({
     Faculty: { type: String},
     course: { type: String, required: true },
     yearOfStudy: { type: Number, required: true },
-    admNumber: { type: String, required: true }
+    admNumber: { type: String, unique:true, required: true }
   },
   tech: {
     Language: String,
